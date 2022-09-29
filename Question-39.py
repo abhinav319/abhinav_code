@@ -2,18 +2,18 @@
 guessed is randomly chosen between 1 and 20. (Source: http://inventwithpython.com)
 This is how it should work when run in a terminal '''
 
-from random import *
+import random
 
-initial_num = randint(1,20)
+my_num = random.randint(1,20)
+name = input("Hello what is Your Name :")
 
-print("Guess the random number between from 1 to 20")
-
+print("Well,",name,',',"I am thinking of a number between 1 to 20. Can you gaess it \n")
 while True:
     user_num = int(input("enter your guess: "))
-    if( initial_num==user_num ):
-        print("Good Job,you are right")
+    if( my_num==user_num ):
+        print("Congratulation!!!!.... yes your right")
         break
-    elif (initial_num>user_num):
-        print("Your guess is too low",end='\n\n' )
+    elif (my_num>user_num):
+        print("My Number is greater than the number you entered. try again:",end='\n\n' )
     else:
-        print("Your guess is too high",end='\n\n')
+        print("My Number is smaller than the number you entered. try again:",end='\n\n')
